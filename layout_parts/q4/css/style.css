@@ -8,16 +8,17 @@
   box-sizing: border-box;
 }
 
-
-
-/* 上のテーブル */
-.q4_table:first-child{
+/* テーブル全体 */
+.q4_table{
   display: table;
   width: 100%; /*100％で横幅いっぱい*/
-  padding-bottom: 40px;
+  margin-top: 40px;
 }
-/* displayをtableにする、中身はtable-cellにするとtableができる 
-  padding-bottomは下のテーブルとの距離を開けるため*/
+/*first-childからmarginをとって固定する*/
+.q4_table:first-child{
+  margin-top: 0;
+}
+
 
 
 /* テーブルのセル の共通要素*/
@@ -28,45 +29,39 @@
   padding: 20px;
 }
 /* 固定のやつ */
-.f1{
+.fix_box{
   width: 100px;
   /*幅いっぱいに使う命令をしているのでwidth: 100px;の両サイドを固定し可変部の長さが変わる*/
 }
 /* 色わけ 左 */
-.f1_l{
+.fix_box_salmon{
   background-color: #fdc8b8;
 }
 /* 色分け　右 */
-.f1_r{
+.fix_box_blue{
   background-color: #b6d8ed;
 }
 /* 可変 */
-.v1_u{
+.variable_box_purple{
   background-color: #e0abd9;
-}
-
-/* 下のテーブル */
-.q4_table:last-child{
-  display: table;
-  width: 100%;
 }
 
 
 
 /* 固定のやつ */
-.f2{ /*これも上と同じで可変部を作り出している*/
+.f_box{ /*これも上と同じで可変部を作り出している*/
   width: 500px;
 }
   /* 固定　色 */
-.f2_u{
+.f_box_green{
   background-color: #8fdcad;
 }
 /* 可変のやつ 左 */
-.v2_l{
+.var_box_yellow{
 background-color: #e5d32e;
 }
 /* 可変のやつ　右 */
-.v2_r{
+.var_box_pink{
   background-color: #ec8f9a;
 }
 

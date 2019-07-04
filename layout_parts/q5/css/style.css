@@ -20,7 +20,7 @@
 
   
 }
-.a{
+.box1{
   background-color: #ffefd3;
   left: 200px;
   top:40px;
@@ -28,7 +28,7 @@
   z-index: auto; /*なくても問題なし*/
 }
 
-.a::after{ /*::これ2個のほうがいいらしい*/
+.box1::after{ /*::これ2個のほうがいいらしい*/
   content: "";
   width: 20px;
   height: 20px;
@@ -42,7 +42,7 @@
 /*position: absoluteは直近のrelative内で座標指定*/
 /*z-index を使うにはpositionの指定をしておかないといけない*/
 
-.b{
+.box2{
   background-color: #7084de;
   position: absolute;
   left: 280px;
@@ -50,7 +50,7 @@
   z-index: 2;
 }
 
-.c{
+.box3{
   background-color: #d0ecea;
   position: absolute;
   left: 360px;
@@ -58,7 +58,7 @@
   z-index: 3;
 }
 
-.d{
+.box4{
   background-color: #8b7a5e;
   position: absolute;
   left: 280px;
@@ -66,7 +66,7 @@
   z-index: 4;
 }
 
-.e{
+.box5{
   background-color: #9fd6d2;
   position: absolute;
   left: 200px;
@@ -74,7 +74,7 @@
   z-index: 5;
 }
 
-.f{
+.box6{
   background-color: #fffee4;
   position: absolute;
   left: 120px;
@@ -82,7 +82,7 @@
   z-index: 6;
 }
 
-.g{
+.box7{
   background-color: #deae70;
   position: absolute;
   left: 40px;
@@ -90,7 +90,7 @@
   z-index: 7;
 }
 
-.h{
+.box8{
   background-color: #de70cf;
   position: absolute;
   left: 120px;
@@ -98,7 +98,7 @@
   z-index: 8;
 }
 
-.i{
+.box9{
   background-color: #2b69a3;
   position: fixed; /*fixedでスクロールしてもどっかに行かない*/
   left: 10px;

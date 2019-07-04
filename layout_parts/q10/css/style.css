@@ -13,10 +13,14 @@
   z-indexを付けて下にする*/
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -35px;
   left: 50px;
-  border: solid 5px #fff;
-  width: 20px;
+  width: 0;
+  height: 0;
+  border-top: solid 20px #fff;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px transparent;
+  border-right: solid 15px transparent;
   z-index: 1; /*白い線の上に下の三角を重ねたいのでz座標を下にする*/
 
 }
