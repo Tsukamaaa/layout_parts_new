@@ -1,5 +1,101 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
+.q7_clearfix::after{
+  content:"";
+  display: block;
+  clear: both;
+}
+.q7_box_float{
+  width: 225px;
+  box-sizing: border-box;
+  /*灰色の箱がwidth: 500px;なので225pxのboxを二つ作ってbox-sizingすると
+  真ん中に50px間ができる、外側の灰色は灰色の箱のpadding*/
+}
 
+.q7_box_float:first-child{
+  float: left;
+}
+
+.q7_box_float:last-child{
+  float: right;
+}
+
+.q7_table{ /*一番大きいやつ　tableでテーブルを作れるようにする
+  collapseで罫線の被りをなくす　border-spacingするときはcollapseしない*/
+  display: table;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.q7_table_cell{
+  table-layout: fixed; /*tabel-layout: fixedでセルの幅を固定する*/
+  width: 225px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.q7_table_cell:first-child{
+  padding-right: 50px;
+}
+
+.q7_inline_block2{
+  border-collapse: collapse;
+  width: 500px;
+  font-size: 0;
+  /*inline-blockの間には隙間があるからfont-size: 0;にして対処しないと50pxのmarginが入らない*/
+}
+
+.q7_box_block{
+  display: inline-block;
+  width: 225px;
+  vertical-align: middle;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 16px;
+}
+/* .q7_box_block:first-childかlast-childでも問題なし */
+.q7_box_block:nth-child(2){
+  margin-left: 50px;
+}
+
+/* flexbox flex-direction:row; で横並び、justify-content:space-aroundで
+周りに均等にスペースをとる、align-items:flex-end で箱の下ぞろえ*/
+.q7_inner_flexbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  
+}
+
+.q7_flexbox_box{
+  width: 225px;
+  box-sizing: border-box;/*box-sizingしないとスペースが足りなくて均等にならない*/
+}
+
+.q7_inline_block3{
+  box-sizing: border-box;
+}
+
+/* .q7_box_textのところでstyleを適用したらうまくいかなかった
+字とかに関係のないcssなのでほかの箱でやるべきなんだと思う */
+.q7_fixed_text{
+  float: left;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+
+.q7_var_text{
+  overflow: hidden;
+  /*overflow: hidden;で入りきらない字を処理する*/
+  float: right;
+  width: 100%;
+  margin-left: -350px;/*negative marginにした分をpaddingで戻さないと崩れる*/
+  padding-left: 350px;
+  box-sizing: border-box;
+  word-break: keep-all;
+
+}
 /* 回答はここに書いてね */

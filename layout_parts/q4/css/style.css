@@ -2,4 +2,72 @@
 
 /* 回答はここに書いてね */
 
+/* 全体を囲うやつ */
+.q4_content{
+  padding: 20px; 
+  box-sizing: border-box;
+}
+
+
+
+/* 上のテーブル */
+.q4_table:first-child{
+  display: table;
+  width: 100%; /*100％で横幅いっぱい*/
+  padding-bottom: 40px;
+}
+/* displayをtableにする、中身はtable-cellにするとtableができる 
+  padding-bottomは下のテーブルとの距離を開けるため*/
+
+
+/* テーブルのセル の共通要素*/
+.q4_tablecell{ 
+  display: table-cell; 
+  text-align: center;
+  vertical-align: middle;
+  padding: 20px;
+}
+/* 固定のやつ */
+.f1{
+  width: 100px;
+  /*幅いっぱいに使う命令をしているのでwidth: 100px;の両サイドを固定し可変部の長さが変わる*/
+}
+/* 色わけ 左 */
+.f1_l{
+  background-color: #fdc8b8;
+}
+/* 色分け　右 */
+.f1_r{
+  background-color: #b6d8ed;
+}
+/* 可変 */
+.v1_u{
+  background-color: #e0abd9;
+}
+
+/* 下のテーブル */
+.q4_table:last-child{
+  display: table;
+  width: 100%;
+}
+
+
+
+/* 固定のやつ */
+.f2{ /*これも上と同じで可変部を作り出している*/
+  width: 500px;
+}
+  /* 固定　色 */
+.f2_u{
+  background-color: #8fdcad;
+}
+/* 可変のやつ 左 */
+.v2_l{
+background-color: #e5d32e;
+}
+/* 可変のやつ　右 */
+.v2_r{
+  background-color: #ec8f9a;
+}
+
 /* 回答はここに書いてね */

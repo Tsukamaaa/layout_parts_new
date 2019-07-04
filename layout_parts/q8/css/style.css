@@ -1,5 +1,274 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
+.q8_btn_content{
+  display: inline-block;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 10px;
+  text-align: center;
+}
 
+.q8_btn_s{
+  height: 26px;
+  font-size: 16px;
+  padding: 0 15px;
+  line-height: 26px;
+  border-radius: 3px;
+}
+.q8_btn_m{
+  height: 32px;
+  font-size: 20px;
+  padding: 0 20px;
+  line-height: 32px;
+  border-radius: 5px;
+}
+.q8_btn_l{
+  height: 38px;
+  font-size: 24px;
+  padding: 0 25px;
+  line-height: 38px;
+  border-radius: 7px; 
+  /* border-radiusは外枠に丸みをつける */
+}
+.q8_common{
+  background-color: #00bcd4;
+  margin-left: 0;
+}
+.q8_error{
+  background-color: #ff4081;
+}
+.q8_dis{
+  background-color: #e5e5e5;
+  cursor: default;
+}
+.q8_sha{
+  color: #222;
+  box-shadow: 0 1px 6px rgba(0,0,0,.12), 0 1px 4px rgba(0,0,0,.12);
+  /*  rgbaはred,green,blue,alphaで最後のやつは透明度*/
+}
+/* box-shadowはx方向、y方向、ぼかし、広がり、色の順番指定できる 
+指定がないと外側、insetだと内側に影がつく*/
+
+/* 送信フォーム */
+.q8_content{ /*フォーム全体の大きさなど*/
+  width: 740px;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background-color: #ecf1f2;
+
+}
+.q8_form_title{
+  position: relative; /*ここを支点にするからrelative*/
+  margin-bottom: 20px; /*下のfloatを考えるとここにmarginつけといたほうが楽*/
+}
+.q8_form_title::before{
+  position: absolute; /*title部分の線を引く*/
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  content: "";
+}
+/* 上の線のかぶっているところをtextのbackground-colorで塗りつぶす */
+.q8_form_title_text{  /*ここはtitle自体の設定*/
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  background-color: #ecf1f2; /*横の線を引くときに使うやつら*/
+  padding-right: 10px;
+  display: inline-block;
+}
+.q8_main_content{ /*左側の箱*/
+  float: left;
+  width: 300px;
+}
+
+.must{ /*絶対記入する項目のマーク*/
+  color:#ed1c24;
+}
+.q8_li_items{  /*listの統一設定*/
+  margin-bottom: 20px;
+  display: inline-block;
+  width: 300px;
+}
+.q8_clearfix::after{  /*いろいろ使うclearfix、使うときはこのclassを付けるようにすると楽*/
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.q8_li_title{  /*titleと箱で左右に振り分ける*/
+  float: left;/*titleを左側にそろえるにはfloatで浮かせないといけない*/
+  text-align: right;
+  width: 100px;
+}
+
+.q8_li_box{ /*titleと箱で左右に振り分ける*/
+  float: right;
+  width: 180px;
+}
+.q8_li_box_r{ /*右側の要素を右に寄せる*/
+  text-align: right;
+}
+.q8_design{ /*大体のものの統一設定*/
+  width: 100%;
+  border-radius: 3px;
+  padding: 5px;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none; /*-webkit-appearanceはいろんなブラウザの表示に差異がないようにする
+  これでもともとあった黒い三角形が消える*/
+  cursor: pointer;
+}
+
+.q8_country_box{ /*ここを支点にafterの位置を決める*/
+  position: relative;
+}
+
+.q8_country_box::after{ /*afterでもともとあった三角形の代わりを作る*/
+  position: absolute;
+  display: block;
+  top: 4px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #e5e5e5; /*borderの線を組み合わせて、回転させて三角に見せる*/
+  border-bottom: 2px solid #e5e5e5;
+  transform: rotate(45deg); /*これが回転具合 degree*/
+  content: "";
+  
+
+}
+.q8_select{ /*作ったラジオボックスを消してspanで隣に新しく作る
+  ここはクリックしたかどうかの情報を持っている、なので紐づけすることでspanで付けたマルに変化がつけられる*/
+  display: none; /*inputのradio bottomが消える*/
+}
+.q8_select_span{
+  position: relative;
+  padding: 3px 3px 3px 20px;
+  cursor: pointer;
+}
+.q8_select_span::before{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  margin-top: -8px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  content: "";
+}
+
+/* inputの中にあるq8_selectとafterの処理をしたq8_select_spanをくっつける */
+.q8_select:checked+.q8_select_span::after{
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  margin-top: -4px;
+  background-color: #00bcd4;
+  border-radius: 50%;
+  content: "";
+}
+
+
+.q8_20{
+ padding: 5px;
+ box-sizing: border-box;
+ background-color: #fff;
+ border: 1px solid #ccc;
+}
+
+.q8_check_btn{
+  display: none; /*inputのcheckboxが消える*/
+}
+.q8_check_box{
+  position: relative;
+  display: inline-block;
+  padding-left: 24px;
+  cursor: pointer;
+}
+
+.q8_check_box::before{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: -9px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  content: "";
+}
+.q8_check_btn:checked+.q8_check_box::after{
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  margin-top: -14px;
+  width: 8px;
+  height: 16px;
+  border-right: 3px solid #00BCD4;
+  border-bottom: 3px solid #00BCD4;
+  transform: rotate(45deg);
+  content: '';
+  /* 大きい四角形を傾けてチェックマークを表現している */
+}
+
+.q8_email_content{ /*右側の箱*/
+  float: right;
+  width: 380px;
+}
+.q8_mail_form{
+  width: 100%;
+  height: 203px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #fff;
+  font-size: 12px;
+  box-sizing: border-box;
+  resize: none;  /*resizeできるようにすると右下をドラッグして引っ張り、箱のサイズを変えられる*/
+  border: none;
+  outline: none; /*outlineはborderと違い上下左右の指定ができない、あと箱のサイズに影響しない*/
+  -webkit-appearance: none;
+}
+
+.q8_send_box{ /*これも左側に浮いてる　それを右に寄せる*/
+  width: 300px;
+  float: left;
+  text-align: right;
+}
+
+.q8_send_btn{ /*送信ボタンのデザイン*/
+  background-color: #00bcd4;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+  -webkit-appearance: none;
+}
+
+.q8_send_btn:active{ /*送信ボタンを押している間の変化*/
+  background-color: #fff;
+  color: #00bcd4;
+  font-size: 16px;
+  line-height: 26px;
+  border: none;
+}
+
+.q8_focus_design:focus{ /*記入できる箱をクリックしたときの変化*/
+  box-shadow: 0 0 10px -1px  #00bcd4;
+}
 /* 回答はここに書いてね */

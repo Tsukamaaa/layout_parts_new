@@ -1,5 +1,46 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
+.q10_speechbbl{ /*::before ::afterの位置の基準になるからrelative必須*/
+  position: relative;
+  margin: 0 auto;
+  width: 500px;
+  border: solid 5px #222; /*とりあえず囲む*/
+  box-sizing: border-box;
+  border-radius: 30px;
+}
+.q10_speechbbl::before{ /*吹き出し用の空間を重ねる　bottomはマイナスにしないとかぶってくれない
+  z-indexを付けて下にする*/
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50px;
+  border: solid 5px #fff;
+  width: 20px;
+  z-index: 1; /*白い線の上に下の三角を重ねたいのでz座標を下にする*/
+
+}
+
+.q10_speechbbl::after{
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50px;
+  height: 20px;
+  width: 20px;
+  border: solid 5px transparent; /*transparentで重なりがいい感じになる*/
+  border-left: solid 5px #222;
+  border-bottom: solid 5px #222;
+  transform: rotate(-45deg);
+  z-index: 2;  
+}
+
+.q10_speech_text{ /*文章部分word-breakはkeep-allっぽい*/
+  text-align: left;
+  word-break: keep-all;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 16px;
+}
 
 /* 回答はここに書いてね */

@@ -1,5 +1,109 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
+.q5_content{
+  width: 500px;
+  height: 500px;
+  background-color: #ecf1f2;
+  margin: 0 auto;
+  position: relative; /*これが配置の基準になる*/
+}
+
+.bx{ /*箱の共通事項*/
+  height: 100px;
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 100px; /*line-heigtを箱と同じにすると字が中央ぞろえになる*/
+
+  
+}
+.a{
+  background-color: #ffefd3;
+  left: 200px;
+  top:40px;
+  position: absolute;
+  z-index: auto; /*なくても問題なし*/
+}
+
+.a::after{ /*::これ2個のほうがいいらしい*/
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #ffefd3;
+  left: 0; /*座標をboxの左上に*/
+  top:80px;
+  position: absolute; /*
+  contentに何か入れないと箱が出てこない、座標のスタート地点が数字のとこっぽい*/
+  z-index: 9 ; /*最後の小さいやつのz-indexの値*/
+}
+/*position: absoluteは直近のrelative内で座標指定*/
+/*z-index を使うにはpositionの指定をしておかないといけない*/
+
+.b{
+  background-color: #7084de;
+  position: absolute;
+  left: 280px;
+  top: 120px;
+  z-index: 2;
+}
+
+.c{
+  background-color: #d0ecea;
+  position: absolute;
+  left: 360px;
+  top: 200px;
+  z-index: 3;
+}
+
+.d{
+  background-color: #8b7a5e;
+  position: absolute;
+  left: 280px;
+  top: 280px;
+  z-index: 4;
+}
+
+.e{
+  background-color: #9fd6d2;
+  position: absolute;
+  left: 200px;
+  top: 360px;
+  z-index: 5;
+}
+
+.f{
+  background-color: #fffee4;
+  position: absolute;
+  left: 120px;
+  top:280px;
+  z-index: 6;
+}
+
+.g{
+  background-color: #deae70;
+  position: absolute;
+  left: 40px;
+  top: 200px;
+  z-index: 7;
+}
+
+.h{
+  background-color: #de70cf;
+  position: absolute;
+  left: 120px;
+  top: 120px;
+  z-index: 8;
+}
+
+.i{
+  background-color: #2b69a3;
+  position: fixed; /*fixedでスクロールしてもどっかに行かない*/
+  left: 10px;
+  top: 10px;
+}
+
 
 /* 回答はここに書いてね */

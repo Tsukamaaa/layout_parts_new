@@ -1,5 +1,72 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
+.q9_photo{ /*大きな箱　変化の視点になるからrelative*/
+  width: 500px;
+  height: 333px;
+  overflow: hidden; /*拡大した後にはみ出した分を隠す*/
+  margin: 0 auto;
+  cursor: pointer;
+  position: relative;
+}
+
+.q9_image_car{ /*変化にかかる時間の指定*/
+  transition: all 0.5s ease; /*easeは開始を完了が滑らか*/
+}
+.q9_car_textbox{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: -100%; /*これで隠しておく*/
+  left: 0;
+  transition: all 0.5s ease;
+  background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,8)); /*これは下の線から影を付けるやつ*/
+}
+.q9_photo:hover .q9_image_car{ /*hoverしたら連動して動くようになる*/
+  transform: scale(1.5);
+}
+
+.q9_car_text{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 20px;
+  color: #fff;
+  text-align: left;
+  word-break: break-all;
+
+}
+.q9_photo:hover .q9_car_textbox{/*hoverしたら隠した奴がいい感じの位置に来る*/
+  bottom: 0;
+}
+
+.q9_content2{
+  width: 100%;
+  height: 120px;
+}
+
+.q9_circle{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: solid 10px #ecf1f2;
+  border-top: solid 10px #00bcd4; /*上部に青色を付ける*/
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: circle 1.1s linear infinite; /*animationに名前・変化にかかる時間
+  ・動きの速さの指定:linearでゆっくり滑らかに動く　infiniteでループする*/
+    
+}
+
+@keyframes circle{ /*名前を付けたやつの動き方を指定する*/
+  0%{
+    -webkit-transform: rotate(0deg);
+  }
+  100%{
+    -webkit-transform: rotate(360deg);
+  }
+}
 
 /* 回答はここに書いてね */

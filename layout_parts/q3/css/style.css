@@ -1,5 +1,56 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
+.q3_table{
+  margin: auto;
+  width: 100%;
+  table-layout: fixed; /*table-layout: fixedで数値の指定がなければ勝手に均等になる*/
+  /* text-alignはここでも反映されるがvertical-alignは反映されない
+  インライン要素と表セル だけにverticalは適用される*/
+}
+/*全角スペースが入ってるとエラーになるから注意！！！*/
+
+/* まとめられるものはまとめる */
+.q3_table th, .q3_table td{
+  border-collapse: collapse; 
+  /* collapseするとborder間の隙間を埋められる 
+  やっとくのがデフォ*/
+  border: solid #dedede 1px;
+  padding: 10px; 
+  vertical-align: middle;
+  text-align:center;
+  /*vertical-align: middleで高さの中央揃え
+  text-align: centerで横の中央揃え*/
+}
+/* <th>は見出し部分 */
+.q3_table th{
+  font-size: 18px;
+  line-height: 26px;
+  background-color: #2244aa;
+  color: #fff;
+}
+
+/* <td>は見出し以降 */
+.q3_table td{
+  line-height: 22px;
+  /* background-color: #ecf1f2; 
+  tdでbackground-colorを指定するとtrでの指定ができなくなるのでtrでやる
+  そしたら:not(:nth-child(2n))で指定できる
+  大きなくくりから色付けやらpaddingやらの指定をした方がいいっぽい
+  */
+  
+}
+/* 5番目に下の線を付ける */
+.q3_table tr:last-child{ /*5番目のやつにこれを付与する*/
+  border-top: dashed #000 2px;
+}
+/* .q3_table tr{
+  background-color: #ecf1f2;
+} */
+/*上のやつは:notがあるからやらなくていい*/
+
+.q3_table tr:not(:nth-child(2n)){ /*奇数列に適用する*/
+  background-color: #ecf1f2;
+}
 
 /* 回答はここに書いてね */

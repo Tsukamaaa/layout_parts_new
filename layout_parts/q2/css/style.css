@@ -1,5 +1,36 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
+.q2_content{ /*全体の箱*/
+  margin: auto;
+  width: 940px;
+  background-color: #eff3f4;
+  padding: 20px;
+  box-sizing: border-box;
+  /* box-sizingやらないとpadding分が加わるからwidthがずれる */
+}
 
+/* .q2_content_box{
+  margin: 20px;
+} */
+/* pのクラス */
+.q2_text_box{ 
+  word-break: break-all;
+  /* word-wrap: break-word;だと文章の末尾をそろえられない */
+  font-size: 18px;
+  line-height: 22px;
+  
+}
+
+.photo_left{
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.photo_right{
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
 /* 回答はここに書いてね */

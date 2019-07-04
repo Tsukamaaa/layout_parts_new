@@ -1,5 +1,47 @@
 @charset "UTF-8";
 
 /* 回答はここに書いてね */
+.q1_content{  /*大きい箱*/
+  margin: 0 auto;
+  width: 940px;
+  background-color: #eff3f4;
+  padding: 20px;
+  box-sizing: border-box;
+ 
+}
+
+/* clearfixのやつ */
+.clearfix::after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.q1_content_box{
+  width: 270px;
+   /* answerはwidth: 230px;でやってる 
+  230pxにpadding 20px足して270px作ってる */
+  padding: 20px;
+  background-color: #3274ae;
+  float: left;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+.q1_content_box:first-child{
+  margin-left: 0px;
+}
+
+.q1_content_text{
+  width: 230px;
+  background-color: #eaf4ff;
+  border: solid #022336 10px;
+  font-size: 16px;
+  box-sizing: border-box;
+  line-height: 16px;
+  padding: 20px;
+  /* textの外にpaddingを付ける */
+  /* margin: 20px; */
+  /* line-heightは行間の調整 */
+}
 
 /* 回答はここに書いてね */
