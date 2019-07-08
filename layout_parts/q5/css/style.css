@@ -10,6 +10,7 @@
 }
 
 .bx{ /*箱の共通事項*/
+  position: absolute;
   height: 100px;
   width: 100px;
   text-align: center;
@@ -24,7 +25,6 @@
   background-color: #ffefd3;
   left: 200px;
   top:40px;
-  position: absolute;
   z-index: auto; /*なくても問題なし*/
 }
 
@@ -44,7 +44,6 @@
 
 .box2{
   background-color: #7084de;
-  position: absolute;
   left: 280px;
   top: 120px;
   z-index: 2;
@@ -52,7 +51,6 @@
 
 .box3{
   background-color: #d0ecea;
-  position: absolute;
   left: 360px;
   top: 200px;
   z-index: 3;
@@ -60,7 +58,6 @@
 
 .box4{
   background-color: #8b7a5e;
-  position: absolute;
   left: 280px;
   top: 280px;
   z-index: 4;
@@ -68,7 +65,6 @@
 
 .box5{
   background-color: #9fd6d2;
-  position: absolute;
   left: 200px;
   top: 360px;
   z-index: 5;
@@ -76,7 +72,6 @@
 
 .box6{
   background-color: #fffee4;
-  position: absolute;
   left: 120px;
   top:280px;
   z-index: 6;
@@ -84,7 +79,6 @@
 
 .box7{
   background-color: #deae70;
-  position: absolute;
   left: 40px;
   top: 200px;
   z-index: 7;
@@ -92,7 +86,6 @@
 
 .box8{
   background-color: #de70cf;
-  position: absolute;
   left: 120px;
   top: 120px;
   z-index: 8;

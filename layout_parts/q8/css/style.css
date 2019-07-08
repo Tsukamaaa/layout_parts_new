@@ -38,7 +38,7 @@
 .q8_error{
   background-color: #ff4081;
 }
-.q8_disable{
+.q8_disabled{
   background-color: #e5e5e5;
   cursor: default;
 }
@@ -121,10 +121,6 @@
   background-color: #fff;
   font-size: 12px;
   line-height: 12px;
-  border: none;
-  outline: none;
-  -webkit-appearance: none; /*-webkit-appearanceはいろんなブラウザの表示に差異がないようにする
-  これでもともとあった黒い三角形が消える*/
   cursor: pointer;
 }
 
@@ -237,9 +233,6 @@
   font-size: 12px;
   box-sizing: border-box;
   resize: none;  /*resizeできるようにすると右下をドラッグして引っ張り、箱のサイズを変えられる*/
-  border: none;
-  outline: none; /*outlineはborderと違い上下左右の指定ができない、あと箱のサイズに影響しない*/
-  -webkit-appearance: none;
 }
 
 .q8_send_box{ /*これも左側に浮いてる　それを右に寄せる*/
@@ -256,8 +249,6 @@
   border-radius: 5px;
   font-size: 16px;
   line-height: 26px;
-  border: none;
-  -webkit-appearance: none;
 }
 
 .q8_send_btn:active{ /*送信ボタンを押している間の変化*/
@@ -265,10 +256,15 @@
   color: #00bcd4;
   font-size: 16px;
   line-height: 26px;
-  outline: none;
 }
 
 .q8_focus_design:focus{ /*記入できる箱をクリックしたときの変化*/
   box-shadow: 0 0 10px -1px  #00bcd4;
 }
-/* 回答はここに書いてね */
+
+.q8_reset{ /*reset用のcss追加*/
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+  /* 回答はここに書いてね */

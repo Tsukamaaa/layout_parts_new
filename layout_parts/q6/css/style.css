@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+/* 回答はここに書いてね */
+.box_para_text{ /*<p>タグはblock要素　height widthの指定 margin paddingがいじれる*/
+  width: 90px;
+  display: inline-block;
+  background-color: #e6f2ff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.q6_text_align{ /*inline-blockだからtext-alignが使える*/
+  text-align: center;
+}
+
+.box_para{ /*pはblockなのでmarginで配置ができる*/
+  width: 90px;
+  background-color: #e6f2ff;
+  /*display: block; <p>の初期値はblock要素なのでいらない*/
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+
+
+/*inline, inline-block要素、表セルはverticalできる*/
+.q6_table{ /*この要素は色がついてるとこよりも大きい*/
+  display: table;
+  border-collapse: collapse;
+}
+/*全体をtableにする*/
+
+/*次の箱をvertical-alignの利くtable-cellにすることで天地中央ぞろえになる*/
+.q6_inner{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/*これをinline-blockにすることで四角が作れる*/
+.table_para{
+  padding: 10px;
+  background-color: #fff;
+  display: inline-block;
+
+}
+
+.q6_flex{ /*flexで親要素がflexboxになる　justify-contentやalign-items
+  はdisplay:flexと同じところに記述する　justifyが縦、alignが横の中央ぞろえ
+  */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+/*ブラウザによって見え方が違ってくることがあるらしい
+ベンダープレフィックスを付ける　-webkit-とか*/
+
+.flex_box{
+  background-color: #fff;
+  padding: 10px;
+}
+
+/*relativeがないとabsoluteで場所の指定ができなくなる
+これは二つまとめた箱*/
+/* .q6_content{
+position: relative;
+} */
+/*ここのrelativeはいらないっぽい*/
+
+/*これは左側の小さい箱*/
+.q6_box{
+  position: relative;
+}/*content内で相対的な位置につく、これがないと消える*/
+
+
+/*margin:auto;で真ん中に持ってくる
+top,bottomとかを0にすることでmarginで真ん中に来るようになっている*/
+.stable_para{
+  box-sizing: border-box;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 110px;
+  height: 30px;
+}
+
+/* q6_boxのposition: relativeを使うのposition: absoluteを指定*/
+.flexible_para{
+  /*pタグにはtext-align: centerが有効*/
+  text-align: center;
+  position: absolute;
+  top: 50%; /*小さい箱の中でtop,left50%のところに左上の角を配置できる*/
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*ずれた分translateで引き戻せる 要素のサイズの半分の距離を左と上に移動させる*/
+  /* paddingの指定は最初からされている */
+}
+/* 回答はここに書いてね */

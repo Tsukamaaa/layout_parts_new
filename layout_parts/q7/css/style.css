@@ -19,7 +19,6 @@
 
 .q7_box_float:first-child{
   margin-left: 0;
-  float: left;
 }
 
 /* .q7_box_float:first-child{
@@ -74,7 +73,6 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-end;
-  
 }
 
 .q7_flexbox_box{
@@ -84,9 +82,9 @@
 
 
 .q7_content_box{ /*大きい箱*/
- font-size: 0;
+  font-size: 0; /*inline-block間に隙間があるので*/
 }
-/*これは何なのか？*/
+
 
 /* .q7_box_textのところでstyleを適用したらうまくいかなかった
 字とかに関係のないcssなのでほかの箱でやるべきなんだと思う */
@@ -95,7 +93,6 @@
   width: 300px;
   vertical-align: top;
   box-sizing: border-box;
-
 }
 
 
@@ -110,6 +107,7 @@
   word-break: keep-all;
   vertical-align: top;
 }
+
 .q7_last_box{
   font-size: 16px;
 }

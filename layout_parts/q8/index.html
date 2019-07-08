@@ -34,7 +34,7 @@
             <p class="q8__title">ー small ー</p>
             <div class="q8_btn_content q8_btn_s q8_common">common</div>
             <div class="q8_btn_content q8_btn_s q8_error">error</div>
-            <div class="q8_btn_content q8_btn_s q8_disable">disabled</div>
+            <div class="q8_btn_content q8_btn_s q8_disabled">disabled</div>
             <div class="q8_btn_content q8_btn_s q8_shadow">shadow</div>
           </div>
 
@@ -42,7 +42,7 @@
             <p class="q8__title">ー middle ー</p>
             <div class="q8_btn_content q8_btn_m q8_common">common</div>
             <div class="q8_btn_content q8_btn_m q8_error">error</div>
-            <div class="q8_btn_content q8_btn_m q8_disable">disabled</div>
+            <div class="q8_btn_content q8_btn_m q8_disabled">disabled</div>
             <div class="q8_btn_content q8_btn_m q8_shadow">shadow</div>
           </div>
 
@@ -50,7 +50,7 @@
             <p class="q8__title">ー large ー</p>
             <div class="q8_btn_content q8_btn_l q8_common">common</div>
             <div class="q8_btn_content q8_btn_l q8_error">error</div>
-            <div class="q8_btn_content q8_btn_l q8_disable">disabled</div>
+            <div class="q8_btn_content q8_btn_l q8_disabled">disabled</div>
             <div class="q8_btn_content q8_btn_l q8_shadow">shadow</div>
           </div>
           <!-- 回答はここに書いてね -->
@@ -116,7 +116,7 @@
                         <!-- 名前のとこ -->
                         <label class="q8_li_title" for="name">名前</label><span class="must">* </span>
                         <div class="q8_li_box">
-                          <input class="q8_design q8_focus_design" type="text" id="name" name="namae" required="required">
+                          <input class="q8_design q8_focus_design q8_reset" type="text" id="name" name="namae" required="required">
                         </div>
                         </li>
 
@@ -135,7 +135,7 @@
                         <li class="q8_li_items q8_clearfix">
                         <label class="q8_li_title"for="i_from">出身</label>
                           <div class="q8_li_box q8_country_box">
-                            <select class="q8_design q8_country" id="i_from" name="i_from">
+                            <select class="q8_design q8_country q8_reset" id="i_from" name="i_from">
                               <option value="東京">東京</option>
                               <option value="埼玉">埼玉</option>
                               <option value="千葉">千葉</option>
@@ -149,7 +149,7 @@
                           <label class="q8_li_title" for="email">Eメール</label>
                           <span class="must">*</span>
                             <div class="q8_li_box">
-                              <input class="q8_design q8_focus_design" type="email" id="email" name="email" required="required" placeholder="ex)hoge@gmail.com">
+                              <input class="q8_design q8_focus_design q8_reset" type="email" id="email" name="email" required="required" placeholder="ex)hoge@gmail.com">
                             </div>
                         </li>
 
@@ -157,7 +157,7 @@
                         <li class="q8_li_items q8_clearfix">
                           <label class="q8_li_title" for="tel">電話番号</label>
                             <div class="q8_li_box">
-                              <input class="q8_design q8_focus_design" type="tel" id="tel" name="tel" placeholder="ex)08012345678">
+                              <input class="q8_design q8_focus_design q8_reset" type="tel" id="tel" name="tel" placeholder="ex)08012345678">
                             </div>
                         </li>
 
@@ -173,15 +173,15 @@
                     
                       <!-- ここから右側 -->
                       <div class="q8_email_content q8_clearfix">
-                  <div class="q8_email_box">
-                    <textarea class="q8_mail_form q8_focus_design" placeholder="何かあれば入力してください。"></textarea>
-                  </div>
+                        <div class="q8_email_box">
+                          <textarea class="q8_mail_form q8_focus_design q8_reset" placeholder="何かあれば入力してください。"></textarea>
+                        </div>
                       </div>
                 </div>
 
                 <!-- 送信ボタン -->
                 <div class="q8_send_box">
-                  <button class="q8_send_btn" type="submit">送信</button>
+                  <button class="q8_send_btn q8_reset" type="submit">送信</button>
                 </div>
                </form>
              </div>
